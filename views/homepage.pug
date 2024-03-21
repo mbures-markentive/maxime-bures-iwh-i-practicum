@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title #{title}
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    .global-wrapper
+      h1 #{title}
+
+      table
+        thead
+          tr
+            th Name
+            th Value
+            th Description
+        tbody
+          each item in data
+            tr
+              td #{item.name}
+              td #{item.value}
+              td #{item.description}
+
+      a(href="/update-cobj") Add to this table
